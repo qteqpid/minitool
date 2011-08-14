@@ -5,6 +5,8 @@
 #include <windows.h>
 #include <iostream>
 
+namespace minitool {
+
 using namespace std;
 
 wstring Encoder::UTF8ToWideChar(const char *str) {
@@ -44,4 +46,6 @@ char * Encoder::WideCharToMultiByte(unsigned int codePage, const wchar_t *wstr) 
 	return str;
 }
 
-#endif
+} // namespace minitool
+
+#endif // WIN32

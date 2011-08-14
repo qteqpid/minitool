@@ -7,6 +7,8 @@
  */
 #include <string>
 
+namespace minitool {
+
 class Encoder
 {
 
@@ -25,6 +27,8 @@ private:
 
 };
 
-#endif
+} // namespace minitool
+
+#endif // WIN32
 
 #endif
