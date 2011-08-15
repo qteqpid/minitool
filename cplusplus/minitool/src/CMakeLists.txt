@@ -2,14 +2,17 @@
 set(CMAKE_C_LINK_FLAGS "-nostdlib")
 
 include_directories(
+/data/home/shawnzhu/query_retrieval/third/gtest-1.6.0/include
 )
 
 link_directories(
+/data/home/shawnzhu/query_retrieval/third/gtest-1.6.0/lib/.libs
 )
 
 aux_source_directory(. minitool_src)
 
 set( libs
+pthread
 )
 
 set( test_libs
@@ -36,6 +39,6 @@ add_executable( test ${minitool_test_src} ${minitool_src} )
 target_link_libraries( test ${libs} ${test_libs} )
 
 install(TARGETS minitool DESTINATION lib)
-install(FILES encoder.h DESTINATION include)
+install(FILES encoder.h common.h DESTINATION include/minitool)
 
  
