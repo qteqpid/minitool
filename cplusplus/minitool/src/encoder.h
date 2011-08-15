@@ -1,5 +1,5 @@
-#ifndef ENCODER_H
-#define ENCODER_H
+#ifndef MINITOOL_ENCODER_H
+#define MINITOOL_ENCODER_H
 
 #ifdef WIN32
 /*
@@ -31,4 +31,4 @@ private:
 
 #endif // WIN32
 
-#endif
+#endif // MINITOOL_ENCODER_H
