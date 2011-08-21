@@ -38,7 +38,11 @@ public class NetUtil {
 	 * @throws IOException
 	 */
 	public static String wget(URL url, String encoding) throws IOException {
-		URLConnection connect = url.openConnection();
+		return wget(url.openConnection(), encoding);
+	}
+
+	protected static String wget(URLConnection connect, String encoding)
+			throws IOException {
 		connect.connect();
 		InputStream input = connect.getInputStream();
 
@@ -75,5 +79,5 @@ public class NetUtil {
 	}
 
 	private static Pattern CHARSET_PATTERN = Pattern.compile(
-			"charset=['\"]?(.*?)['\"]?", Pattern.CASE_INSENSITIVE);
+			"charset=['\"]?(.*?)['\"]?(\\s+|$)", Pattern.CASE_INSENSITIVE);
 }

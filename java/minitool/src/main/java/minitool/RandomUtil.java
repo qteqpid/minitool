@@ -27,7 +27,7 @@ public class RandomUtil {
 	 * @return [0, weights.length)之间的一个整数
 	 */
 	public static int randomSelect(Random r, int[] weights) {
-		if (weights.length == 0) {
+		if (weights == null || weights.length == 0) {
 			throw new IllegalArgumentException(
 					"weights must not be an empty array");
 		}
