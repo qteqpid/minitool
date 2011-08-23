@@ -6,6 +6,29 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
 
+/**
+ * 
+ * 使用方法：
+ * 
+ * <pre>
+ * for (File file : new FileWalker(&quot;.&quot;)) {
+ * 	System.out.println(file);
+ * }
+ * </pre>
+ * 
+ * 或者
+ * 
+ * <pre>
+ * new FileWalker(".").walk(new FileHandler() {
+ * 	<code>@Override<code>
+ * 	public void handle(File file) {
+ * 		System.out.println(file);
+ * 	}
+ * });
+ * </pre>
+ * 
+ * @author wing
+ */
 public class FileWalker implements Iterable<File> {
 
 	private File file;
